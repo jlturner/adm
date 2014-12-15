@@ -1,0 +1,24 @@
+name:                adm
+-- http://www.haskell.org/haskellwiki/Package_versioning_policy
+-- PVP summary:      +-+------- breaking API changes
+--                   | | +----- non-breaking API additions
+--                   | | | +--- code changes with no API change
+version:             0.1.0.0
+synopsis:            ADM (pronounced "Adam") is an adaptive drum machine program.
+description:   	     The initial goal for this project is to create a drum machine program that produces 1 bar drum loops in 4/4 time. It also is responsible for creating optimal drum samples by combining one or more samples at different volumes. It uses genetic algorithms to recombine drum loops and adapt to a user scored value (human input as a heuristic). ADM optimizes for the user's ever changing preference - coinciding with the Adaptive Tools manifesto.
+homepage:            https://github.com/jlturner/adm
+license:             MIT
+license-file:        LICENSE
+author:              James Lawrence Turner
+maintainer:          jlturner@fastmail.com
+copyright:           Copyright 2015 James Lawrence Turner
+category:            Sound
+build-type:          Simple
+extra-source-files:  README.md
+cabal-version:       >=1.10
+executable adm
+  ghc-options:	       -Wall
+  hs-source-dirs:      src
+  main-is:             Main.hs
+  build-depends:       base >=4.6 && <4.7
+  default-language:    Haskell2010
